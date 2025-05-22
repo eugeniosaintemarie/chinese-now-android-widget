@@ -1,0 +1,27 @@
+{
+    "name": "C·NOW",
+    "short_name": "C·NOW",
+    "description": "",
+    "start_url": "/chinese-now/",
+    "display": "standalone",
+    "orientation": "portrait",
+    "background_color": "#212121",
+    "icons": [
+        {
+            "src": "/images/favicon-16x16.png",
+            "sizes": "16x16"
+        },
+        {
+            "src": "./images/favicon-32x32.png",
+            "sizes": "32x32"
+        },
+        {
+            "src": "./images/favicon-192x192.png",
+            "sizes": "128x128"
+        },
+        {
+            "src": "./images/favicon-512x512.png",
+            "sizes": "512x512"
+        }
+    ]
+}

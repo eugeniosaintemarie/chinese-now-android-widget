@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="theme-color" content="#ffffff">
+    <meta name="application-name" content="C·NOW">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="C·NOW">
+    <link rel="manifest" href="./manifest.json">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C·NOW</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+    <style>
+        body {
+            font-family: "Roboto", sans-serif;
+            font-size: 20px;
+            background-color: #000000;
+            color: #F5F5F5;
+        }
+        h1 {
+            font-size: 1.50em;
+        }
+        h2, h3 {
+            font-size: 1.25em;
+        }
+        h4 {
+            font-size: 1em;
+        }
+        .pinyinContainer {
+            margin-top: 0;
+            margin-left: 57px;
+        }
+        .pinyin {
+            color: #616161;
+            font-size: 0.75em;
+        }
+        .red {
+            color: #F44336;
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+        .grey {
+            /*color: #9E9E9E;*/
+        }
+        #access {
+            margin-left: 15px;
+            margin-right: 15px;
+            position: fixed;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 50px;
+            z-index: 1000;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/12db9cd0d1.js" crossorigin="anonymous"></script>
+    <script>
+        fetch("https://eugeniosaintemarie.github.io/config-central/url.json")
+            .then(response => response.json())
+            .then(config => {
+                const baseURL = config.baseURL;
+                const getRepoURL = (repoName) => `${baseURL}/${repoName}/`;
+                const repoName = getRepoURL("chinese-words");
+                document.getElementById("access").href = repoName;
+            })
+            .catch(error => console.error("Error loading configuration:", error));
+    </script>
+</head>
+<body>
+    <h2 id="time">
+    </h2>
+    <h2 id="day"></h2>
+    <h2 id="month">
+    </h2>
+    <h2 id="year">
+    </h2>
+    <h2 id="season">
+    </h2>
+    <br>
+    <a id="access" style="color: #9E9E9E !important; text-decoration: none !important;" href="#">词</a>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const dayInChinese = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
+            const monthInChinese = ["一", "二", "三", "四", "五", "六", "七", "八", "九", "十", "十一", "十二"];
+            
+            function updateDateTime() {
+                const date = new Date();
+                const hours = date.getHours();
+                const minutes = date.getMinutes();
+                const seconds = date.getSeconds();
+                const day = date.getDay();
+                const months = date.getMonth() + 1;
+                const year = date.getFullYear();
+                const season = getSeason(months);
+
+                const chineseTime = `<span class="red"><i class="fa-solid fa-clock"></i></span> 
+                                ${convertToChineseNumber(hours)}<span class="grey">时</span>
+                                ${convertToChineseNumber(minutes)}<span class="grey">分</span>
+                                ${convertToChineseNumber(seconds)}<span class="grey">秒</span>
+                                <div class="pinyinContainer">
+                                    <span class="pinyin">${getPronunciationHourMonth(hours)} <span class="grey">shí</span> </span>
+                                    <span class="pinyin">${getPronunciationHourMonth(minutes)} <span class="grey">fēn</span> </span>
+                                    <span class="pinyin">${getPronunciationHourMonth(seconds)} <span class="grey">miǎo</span> </span>
+                                </div>`;
+
+                document.getElementById("time").innerHTML = chineseTime;
+                document.getElementById("day").innerHTML = `<span class="red"><i class="fa-solid fa-calendar-day"></i></span> ${dayInChinese[day]}
+                                <div class="pinyinContainer">
+                                    <span class="pinyin">${getPronunciationDay(day)}</span>
+                                </div>`;
+                document.getElementById("month").innerHTML = `<span class="red"><i class="fa-solid fa-calendar"></i></span> ${convertToChineseNumber(months)} <span class="grey">月</span>
+                                <div class="pinyinContainer">
+                                    <span class="pinyin">${getPronunciationHourMonth(months)} <span class="grey">yuè</span></span>
+                                </div>`;
+                document.getElementById("year").innerHTML = `<span class="red"><i class="fa-solid fa-globe"></i></span> ${convertToChineseNumber(year)}
+                                <div class="pinyinContainer">
+                                    <span class="pinyin">${getPronunciationHourMonth(year)}</span>
+                                </div>`;
+                document.getElementById("season").innerHTML = `<span class="red"><i class="fa-solid fa-tree"></i></span> ${season}
+                                <div class="pinyinContainer">
+                                    <span class="pinyin">${getPronunciationSeason(season)}</span>
+                                </div>`;
+            }
+            
+            updateDateTime();
+            
+            setInterval(updateDateTime, 1000);
+        });
+
+        //from China
+        /*function getSeason(month) {
+            if (month >= 2 && month <= 4) {
+                return "春季"; //spring
+            } else if (month >= 5 && month <= 7) {
+                return "夏季"; //summer
+            } else if (month >= 8 && month <= 10) {
+                return "秋季"; //autumn
+            } else {
+                return "冬季"; //winter
+            }
+        }*/
+        //from Argentina
+        function getSeason(month) {
+            if ((month >= 1 && month <= 2) || month === 12) {
+                return "夏季"; //summer
+            } else if (month >= 3 && month <= 5) {
+                return "秋季"; //autumn
+            } else if (month >= 6 && month <= 8) {
+                return "冬季"; //winter
+            } else {
+                return "春季"; //spring
+            }
+        }
+
+        function convertToChineseNumber(number) {
+            const chineseNumbers = ["零", "一", "二", "三", "四", "五", "六", "七", "八", "九"];
+            const numStr = number.toString();
+            let result = "";
+            for (let i = 0; i < numStr.length; i++) {
+                if (numStr[i] === '1' && i < numStr.length - 1) {
+                    result += "十";
+                } else {
+                    result += chineseNumbers[parseInt(numStr[i])];
+                }
+            }
+            return result;
+        }
+
+        function getPronunciationHourMonth(number) {
+            const pronunciation = [
+                "líng", "yī", "èr", "sān", "sì", "wǔ", "liù", "qī", "bā", "jiǔ", "shí"
+            ];
+            const numStr = number.toString();
+            let result = "";
+            for (let i = 0; i < numStr.length; i++) {
+                result += pronunciation[parseInt(numStr[i])] + " ";
+            }
+            return result.trim();
+        }
+
+        function getPronunciationDay(number) {
+            const pronunciationDay = [
+                /*"xīng qī rì", "xīng qī yī", "xīng qī èr", "xīng qī sān", "xīng qī sì", "xīng qī wǔ", "xīng qī liù"*/
+                "xīng qī rì <i>(sunday)</i>", "xīng qī yī <i>(monday)</i>", "xīng qī èr <i>(tuesday)</i>", "xīng qī sān <i>(wednesday)</i>", "xīng qī sì <i>(thursday)</i>", "xīng qī wǔ <i>(friday)</i>", "xīng qī liù <i>(saturday)</i>"
+            ];
+            return pronunciationDay[number];
+        }
+
+        function getPronunciationSeason(season) {
+            const pronunciationSeason = {
+                /*"春季": "chūn jì", "夏季": "xià jì", "秋季": "qiū jì", "冬季": "dōng jì"*/
+                "春季": "chūn jì <i>(spring)</i>", "夏季": "xià jì <i>(summer)</i>", "秋季": "qiū jì <i>(autumn)</i>", "冬季": "dōng jì <i>(winter)</i>"
+            };
+            return pronunciationSeason[season];
+        }
+    </script>
+    <footer></footer>
+</body>
+</html>
