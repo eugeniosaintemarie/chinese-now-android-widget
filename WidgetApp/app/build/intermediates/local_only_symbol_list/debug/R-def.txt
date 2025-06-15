@@ -1,0 +1,13 @@
+R_DEF: Internal format may change without notice
+local
+dimen widget_margin
+id widget_refresh_button
+id widget_webview
+layout new_app_widget
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+string app_widget_description
+string appwidget_text
+style AppTheme
+xml new_app_widget_info

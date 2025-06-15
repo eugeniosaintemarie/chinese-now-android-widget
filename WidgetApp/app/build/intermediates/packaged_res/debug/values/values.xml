@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="widget_margin">8dp</dimen>
+    <string name="app_name">WidgetApp</string>
+    <string name="app_widget_description">This is an example app widget.</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        
+    </style>
+</resources>
