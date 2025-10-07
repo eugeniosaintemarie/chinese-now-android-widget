@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "com.example.chinesenowwidget.app-mergeDebugResources-31:/layout/webview_layout.xml",
+        "source": "com.example.chinesenowwidget.app-main-34:/layout/webview_layout.xml"
+    },
+    {
+        "merged": "com.example.chinesenowwidget.app-mergeDebugResources-31:/layout/widget_layout.xml",
+        "source": "com.example.chinesenowwidget.app-main-34:/layout/widget_layout.xml"
+    }
+]

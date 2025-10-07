@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "com.example.chinesenowwidget.app-debug-32:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.chinesenowwidget.app-main-34:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\.gradle\\daemon\\8.7\\com.example.chinesenowwidget.app-debug-32:\\layout_widget_layout.xml.flat",
+        "source": "C:\\Users\\Administrator\\.gradle\\daemon\\8.7\\com.example.chinesenowwidget.app-main-34:\\layout\\widget_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\.gradle\\daemon\\8.7\\com.example.chinesenowwidget.app-debug-32:\\xml_widget_info.xml.flat",
+        "source": "C:\\Users\\Administrator\\.gradle\\daemon\\8.7\\com.example.chinesenowwidget.app-main-34:\\xml\\widget_info.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\.gradle\\daemon\\8.7\\com.example.chinesenowwidget.app-debug-32:\\layout_webview_layout.xml.flat",
+        "source": "C:\\Users\\Administrator\\.gradle\\daemon\\8.7\\com.example.chinesenowwidget.app-main-34:\\layout\\webview_layout.xml"
+    },
+    {
+        "merged": "com.example.chinesenowwidget.app-debug-32:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.chinesenowwidget.app-main-34:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.chinesenowwidget.app-debug-32:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.example.chinesenowwidget.app-main-34:/drawable/ic_launcher_foreground.xml"
+    }
+]

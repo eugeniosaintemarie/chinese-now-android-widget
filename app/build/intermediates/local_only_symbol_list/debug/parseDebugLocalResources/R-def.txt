@@ -1,0 +1,13 @@
+R_DEF: Internal format may change without notice
+local
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+id open_button
+id refresh_button
+id webview
+id widget_title
+layout webview_layout
+layout widget_layout
+mipmap ic_launcher
+string app_name
+xml widget_info
