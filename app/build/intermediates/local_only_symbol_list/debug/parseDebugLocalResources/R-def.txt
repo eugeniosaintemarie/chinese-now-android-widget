@@ -2,12 +2,23 @@ R_DEF: Internal format may change without notice
 local
 drawable ic_launcher_background
 drawable ic_launcher_foreground
-id open_button
+id day_pinyin
+id day_text
+id month_pinyin
+id month_text
 id refresh_button
+id season_pinyin
+id season_text
+id time_pinyin
+id time_text
 id webview
-id widget_title
+id year_pinyin
+id year_text
+layout activity_main
 layout webview_layout
 layout widget_layout
 mipmap ic_launcher
 string app_name
+style AppTheme
+style AppTheme.NoActionBar
 xml widget_info

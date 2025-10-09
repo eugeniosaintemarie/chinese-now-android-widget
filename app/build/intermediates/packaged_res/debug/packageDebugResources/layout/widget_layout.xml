@@ -1,36 +1,114 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:background="#202020"
-    android:padding="8dp"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingBottom="0dp"
+    android:paddingTop="0dp"
+    android:background="#000000">
+
+    <!-- Primera fila: Hora y botón de actualizar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/time_text"
+            android:text="时间"
+            android:textColor="#F44336"
+            android:textSize="18sp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/refresh_button"
+            android:text="⟳"
+            android:textColor="#616161"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:background="@android:color/transparent"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+    </LinearLayout>
 
     <TextView
-        android:id="@+id/widget_title"
-        android:text="Chinese Now"
-        android:textColor="@android:color/white"
-        android:textStyle="bold"
-        android:textSize="16sp"
-        android:gravity="center"
+        android:id="@+id/time_pinyin"
+        android:text="pinyin"
+        android:textColor="#E0E0E0"
+        android:textSize="11sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
-    <Button
-        android:id="@+id/refresh_button"
-        android:text="Actualizar"
-        android:layout_marginTop="4dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center" />
-
+    <!-- Día -->
     <TextView
-        android:id="@+id/open_button"
-        android:text="Ver contenido"
-        android:textColor="#4FC3F7"
-        android:paddingTop="6dp"
-        android:textSize="14sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center" />
+        android:id="@+id/day_text"
+        android:text="星期"
+        android:textColor="#F44336"
+        android:textSize="18sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    
+    <TextView
+        android:id="@+id/day_pinyin"
+        android:text="pinyin"
+        android:textColor="#E0E0E0"
+        android:textSize="11sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- Mes -->
+    <TextView
+        android:id="@+id/month_text"
+        android:text="月"
+        android:textColor="#F44336"
+        android:textSize="18sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    
+    <TextView
+        android:id="@+id/month_pinyin"
+        android:text="pinyin"
+        android:textColor="#E0E0E0"
+        android:textSize="11sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- Año -->
+    <TextView
+        android:id="@+id/year_text"
+        android:text="年"
+        android:textColor="#F44336"
+        android:textSize="18sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    
+    <TextView
+        android:id="@+id/year_pinyin"
+        android:text="pinyin"
+        android:textColor="#E0E0E0"
+        android:textSize="11sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- Estación -->
+    <TextView
+        android:id="@+id/season_text"
+        android:text="季节"
+        android:textColor="#F44336"
+        android:textSize="18sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    
+    <TextView
+        android:id="@+id/season_pinyin"
+        android:text="pinyin"
+        android:textColor="#E0E0E0"
+        android:textSize="11sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
 </LinearLayout>

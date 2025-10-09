@@ -1,11 +1,12 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.chinesenowwidget">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application
-        android:label="ChineseNowWidget"
-        android:icon="@mipmap/ic_launcher">
+        android:label="ChineseNow"
+        android:icon="@mipmap/ic_launcher"
+        android:theme="@style/AppTheme">
 
-        <receiver android:name=".ChineseNowWidget"
+        <!-- Widget Receiver -->
+        <receiver android:name=".ChineseNow"
             android:label="Chinese Now Widget"
             android:exported="true">
             <intent-filter>
@@ -17,9 +18,6 @@
                 android:resource="@xml/widget_info" />
         </receiver>
 
-        <activity android:name=".WidgetWebViewActivity"
-            android:exported="true"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
     </application>
 
 </manifest>

@@ -4,7 +4,6 @@ package com.example.chinesenowwidget.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -21,20 +20,55 @@ public final class WidgetLayoutBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
-  public final TextView openButton;
+  public final TextView dayPinyin;
 
   @NonNull
-  public final Button refreshButton;
+  public final TextView dayText;
 
   @NonNull
-  public final TextView widgetTitle;
+  public final TextView monthPinyin;
 
-  private WidgetLayoutBinding(@NonNull LinearLayout rootView, @NonNull TextView openButton,
-      @NonNull Button refreshButton, @NonNull TextView widgetTitle) {
+  @NonNull
+  public final TextView monthText;
+
+  @NonNull
+  public final TextView refreshButton;
+
+  @NonNull
+  public final TextView seasonPinyin;
+
+  @NonNull
+  public final TextView seasonText;
+
+  @NonNull
+  public final TextView timePinyin;
+
+  @NonNull
+  public final TextView timeText;
+
+  @NonNull
+  public final TextView yearPinyin;
+
+  @NonNull
+  public final TextView yearText;
+
+  private WidgetLayoutBinding(@NonNull LinearLayout rootView, @NonNull TextView dayPinyin,
+      @NonNull TextView dayText, @NonNull TextView monthPinyin, @NonNull TextView monthText,
+      @NonNull TextView refreshButton, @NonNull TextView seasonPinyin, @NonNull TextView seasonText,
+      @NonNull TextView timePinyin, @NonNull TextView timeText, @NonNull TextView yearPinyin,
+      @NonNull TextView yearText) {
     this.rootView = rootView;
-    this.openButton = openButton;
+    this.dayPinyin = dayPinyin;
+    this.dayText = dayText;
+    this.monthPinyin = monthPinyin;
+    this.monthText = monthText;
     this.refreshButton = refreshButton;
-    this.widgetTitle = widgetTitle;
+    this.seasonPinyin = seasonPinyin;
+    this.seasonText = seasonText;
+    this.timePinyin = timePinyin;
+    this.timeText = timeText;
+    this.yearPinyin = yearPinyin;
+    this.yearText = yearText;
   }
 
   @Override
@@ -64,26 +98,75 @@ public final class WidgetLayoutBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.open_button;
-      TextView openButton = ViewBindings.findChildViewById(rootView, id);
-      if (openButton == null) {
+      id = R.id.day_pinyin;
+      TextView dayPinyin = ViewBindings.findChildViewById(rootView, id);
+      if (dayPinyin == null) {
+        break missingId;
+      }
+
+      id = R.id.day_text;
+      TextView dayText = ViewBindings.findChildViewById(rootView, id);
+      if (dayText == null) {
+        break missingId;
+      }
+
+      id = R.id.month_pinyin;
+      TextView monthPinyin = ViewBindings.findChildViewById(rootView, id);
+      if (monthPinyin == null) {
+        break missingId;
+      }
+
+      id = R.id.month_text;
+      TextView monthText = ViewBindings.findChildViewById(rootView, id);
+      if (monthText == null) {
         break missingId;
       }
 
       id = R.id.refresh_button;
-      Button refreshButton = ViewBindings.findChildViewById(rootView, id);
+      TextView refreshButton = ViewBindings.findChildViewById(rootView, id);
       if (refreshButton == null) {
         break missingId;
       }
 
-      id = R.id.widget_title;
-      TextView widgetTitle = ViewBindings.findChildViewById(rootView, id);
-      if (widgetTitle == null) {
+      id = R.id.season_pinyin;
+      TextView seasonPinyin = ViewBindings.findChildViewById(rootView, id);
+      if (seasonPinyin == null) {
         break missingId;
       }
 
-      return new WidgetLayoutBinding((LinearLayout) rootView, openButton, refreshButton,
-          widgetTitle);
+      id = R.id.season_text;
+      TextView seasonText = ViewBindings.findChildViewById(rootView, id);
+      if (seasonText == null) {
+        break missingId;
+      }
+
+      id = R.id.time_pinyin;
+      TextView timePinyin = ViewBindings.findChildViewById(rootView, id);
+      if (timePinyin == null) {
+        break missingId;
+      }
+
+      id = R.id.time_text;
+      TextView timeText = ViewBindings.findChildViewById(rootView, id);
+      if (timeText == null) {
+        break missingId;
+      }
+
+      id = R.id.year_pinyin;
+      TextView yearPinyin = ViewBindings.findChildViewById(rootView, id);
+      if (yearPinyin == null) {
+        break missingId;
+      }
+
+      id = R.id.year_text;
+      TextView yearText = ViewBindings.findChildViewById(rootView, id);
+      if (yearText == null) {
+        break missingId;
+      }
+
+      return new WidgetLayoutBinding((LinearLayout) rootView, dayPinyin, dayText, monthPinyin,
+          monthText, refreshButton, seasonPinyin, seasonText, timePinyin, timeText, yearPinyin,
+          yearText);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

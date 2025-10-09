@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="#000000">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chinese Now Widget"
+        android:textColor="#F5F5F5"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Esta es una aplicación de widget.\n\nPara usar la aplicación:\n\n1. Ve a la pantalla de inicio\n2. Mantén presionado en un espacio vacío\n3. Selecciona 'Widgets'\n4. Busca 'Chinese Now Widget'\n5. Arrástralo a tu pantalla de inicio"
+        android:textColor="#9E9E9E"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:lineSpacingExtra="4dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="词"
+        android:textColor="#F44336"
+        android:textSize="48sp"
+        android:layout_marginTop="32dp" />
+
+</LinearLayout>

@@ -3232,6 +3232,8 @@ id custom
 id customPanel
 id cut
 id date_picker_actions
+id day_pinyin
+id day_text
 id decelerate
 id decelerateAndComplete
 id decor_content_parent
@@ -3369,6 +3371,8 @@ id month_navigation_bar
 id month_navigation_fragment_toggle
 id month_navigation_next
 id month_navigation_previous
+id month_pinyin
+id month_text
 id month_title
 id motion_base
 id mtrl_anchor_parent
@@ -3416,7 +3420,6 @@ id notification_main_column_container
 id off
 id on
 id onInterceptTouchReturnSwipe
-id open_button
 id open_search_bar_text_view
 id open_search_view_background
 id open_search_view_clear_button
@@ -3483,6 +3486,8 @@ id search_mag_icon
 id search_plate
 id search_src_text
 id search_voice_btn
+id season_pinyin
+id season_text
 id select_dialog_listview
 id selected
 id selection_type
@@ -3555,6 +3560,8 @@ id textinput_placeholder
 id textinput_prefix_text
 id textinput_suffix_text
 id time
+id time_pinyin
+id time_text
 id title
 id titleDividerNoCustom
 id title_template
@@ -3589,7 +3596,6 @@ id visible
 id visible_removing_fragment_view_tag
 id webview
 id west
-id widget_title
 id withText
 id with_icon
 id withinBounds
@@ -3598,6 +3604,8 @@ id wrap_content
 id wrap_content_constrained
 id x_left
 id x_right
+id year_pinyin
+id year_text
 integer abc_config_activityDefaultDur
 integer abc_config_activityShortDur
 integer app_bar_elevation_anim_duration
@@ -3712,6 +3720,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_main
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -3973,6 +3982,8 @@ style Animation_Material3_SideSheetDialog
 style Animation_Material3_SideSheetDialog_Left
 style Animation_Material3_SideSheetDialog_Right
 style Animation_MaterialComponents_BottomSheetDialog
+style AppTheme
+style AppTheme_NoActionBar
 style Base_AlertDialog_AppCompat
 style Base_AlertDialog_AppCompat_Light
 style Base_Animation_AppCompat_Dialog

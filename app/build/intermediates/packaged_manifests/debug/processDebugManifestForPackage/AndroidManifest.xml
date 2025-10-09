@@ -19,10 +19,13 @@
         android:debuggable="true"
         android:extractNativeLibs="false"
         android:icon="@mipmap/ic_launcher"
-        android:label="ChineseNowWidget"
-        android:testOnly="true" >
+        android:label="ChineseNow"
+        android:testOnly="true"
+        android:theme="@style/AppTheme" >
+
+        <!-- Widget Receiver -->
         <receiver
-            android:name="com.example.chinesenowwidget.ChineseNowWidget"
+            android:name="com.example.chinesenowwidget.ChineseNow"
             android:exported="true"
             android:label="Chinese Now Widget" >
             <intent-filter>
@@ -33,11 +36,6 @@
                 android:name="android.appwidget.provider"
                 android:resource="@xml/widget_info" />
         </receiver>
-
-        <activity
-            android:name="com.example.chinesenowwidget.WidgetWebViewActivity"
-            android:exported="true"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
 
         <provider
             android:name="androidx.startup.InitializationProvider"
