@@ -37,11 +37,9 @@ class ChineseNow : AppWidgetProvider() {
         try {
             val views = RemoteViews(context.packageName, R.layout.widget_layout)
 
-            // Obtener datos en chino
             val chineseData = ChineseConverter.getCurrentChineseData()
             Log.d(TAG, "Chinese data: ${chineseData.time}")
 
-            // Actualizar los TextViews con los datos
             views.setTextViewText(R.id.time_text, chineseData.time)
             views.setTextViewText(R.id.time_pinyin, chineseData.timePinyin)
             
@@ -57,7 +55,6 @@ class ChineseNow : AppWidgetProvider() {
             views.setTextViewText(R.id.season_text, chineseData.season)
             views.setTextViewText(R.id.season_pinyin, chineseData.seasonPinyin)
 
-            // Intent para actualizar manualmente (botón refresh)
             val refreshIntent = Intent(context, ChineseNow::class.java).apply {
                 action = AppWidgetManager.ACTION_APPWIDGET_UPDATE
                 putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS, intArrayOf(appWidgetId))

@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Administrator\Documents\Git\chinese-now-android-widget\app\src\main\AndroidManifest.xml:1:1-23:12
-INJECTED from C:\Users\Administrator\Documents\Git\chinese-now-android-widget\app\src\main\AndroidManifest.xml:1:1-23:12
-INJECTED from C:\Users\Administrator\Documents\Git\chinese-now-android-widget\app\src\main\AndroidManifest.xml:1:1-23:12
-INJECTED from C:\Users\Administrator\Documents\Git\chinese-now-android-widget\app\src\main\AndroidManifest.xml:1:1-23:12
+ADDED from C:\Users\Administrator\Documents\Git\chinese-now-android-widget\app\src\main\AndroidManifest.xml:1:1-22:12
+INJECTED from C:\Users\Administrator\Documents\Git\chinese-now-android-widget\app\src\main\AndroidManifest.xml:1:1-22:12
+INJECTED from C:\Users\Administrator\Documents\Git\chinese-now-android-widget\app\src\main\AndroidManifest.xml:1:1-22:12
+INJECTED from C:\Users\Administrator\Documents\Git\chinese-now-android-widget\app\src\main\AndroidManifest.xml:1:1-22:12
 MERGED from [androidx.databinding:viewbinding:8.13.0] C:\Users\Administrator\.gradle\caches\8.13\transforms\480de28794f102c9bfe3e2b7fb54189c\transformed\viewbinding-8.13.0\AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\Administrator\.gradle\caches\8.13\transforms\ce4acee29457e9a8f79e01d68d1ab4df\transformed\material-1.12.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\Administrator\.gradle\caches\8.13\transforms\65fdb9b435c0774c34517e9457ac8143\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
@@ -56,8 +56,8 @@ MERGED from [androidx.print:print:1.0.0] C:\Users\Administrator\.gradle\caches\8
 	xmlns:android
 		ADDED from C:\Users\Administrator\Documents\Git\chinese-now-android-widget\app\src\main\AndroidManifest.xml:1:11-69
 application
-ADDED from C:\Users\Administrator\Documents\Git\chinese-now-android-widget\app\src\main\AndroidManifest.xml:3:5-21:19
-INJECTED from C:\Users\Administrator\Documents\Git\chinese-now-android-widget\app\src\main\AndroidManifest.xml:3:5-21:19
+ADDED from C:\Users\Administrator\Documents\Git\chinese-now-android-widget\app\src\main\AndroidManifest.xml:3:5-20:19
+INJECTED from C:\Users\Administrator\Documents\Git\chinese-now-android-widget\app\src\main\AndroidManifest.xml:3:5-20:19
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\Administrator\.gradle\caches\8.13\transforms\ce4acee29457e9a8f79e01d68d1ab4df\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\Administrator\.gradle\caches\8.13\transforms\ce4acee29457e9a8f79e01d68d1ab4df\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\Administrator\.gradle\caches\8.13\transforms\65fdb9b435c0774c34517e9457ac8143\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -85,25 +85,25 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Administrator\.gra
 	android:theme
 		ADDED from C:\Users\Administrator\Documents\Git\chinese-now-android-widget\app\src\main\AndroidManifest.xml:6:9-40
 receiver#com.example.chinesenowwidget.ChineseNow
-ADDED from C:\Users\Administrator\Documents\Git\chinese-now-android-widget\app\src\main\AndroidManifest.xml:9:9-19:20
+ADDED from C:\Users\Administrator\Documents\Git\chinese-now-android-widget\app\src\main\AndroidManifest.xml:8:9-18:20
 	android:label
-		ADDED from C:\Users\Administrator\Documents\Git\chinese-now-android-widget\app\src\main\AndroidManifest.xml:10:13-47
+		ADDED from C:\Users\Administrator\Documents\Git\chinese-now-android-widget\app\src\main\AndroidManifest.xml:9:13-47
 	android:exported
-		ADDED from C:\Users\Administrator\Documents\Git\chinese-now-android-widget\app\src\main\AndroidManifest.xml:11:13-36
+		ADDED from C:\Users\Administrator\Documents\Git\chinese-now-android-widget\app\src\main\AndroidManifest.xml:10:13-36
 	android:name
-		ADDED from C:\Users\Administrator\Documents\Git\chinese-now-android-widget\app\src\main\AndroidManifest.xml:9:19-45
+		ADDED from C:\Users\Administrator\Documents\Git\chinese-now-android-widget\app\src\main\AndroidManifest.xml:8:19-45
 intent-filter#action:name:android.appwidget.action.APPWIDGET_UPDATE
-ADDED from C:\Users\Administrator\Documents\Git\chinese-now-android-widget\app\src\main\AndroidManifest.xml:12:13-14:29
+ADDED from C:\Users\Administrator\Documents\Git\chinese-now-android-widget\app\src\main\AndroidManifest.xml:11:13-13:29
 action#android.appwidget.action.APPWIDGET_UPDATE
-ADDED from C:\Users\Administrator\Documents\Git\chinese-now-android-widget\app\src\main\AndroidManifest.xml:13:17-84
+ADDED from C:\Users\Administrator\Documents\Git\chinese-now-android-widget\app\src\main\AndroidManifest.xml:12:17-84
 	android:name
-		ADDED from C:\Users\Administrator\Documents\Git\chinese-now-android-widget\app\src\main\AndroidManifest.xml:13:25-81
+		ADDED from C:\Users\Administrator\Documents\Git\chinese-now-android-widget\app\src\main\AndroidManifest.xml:12:25-81
 meta-data#android.appwidget.provider
-ADDED from C:\Users\Administrator\Documents\Git\chinese-now-android-widget\app\src\main\AndroidManifest.xml:16:13-18:55
+ADDED from C:\Users\Administrator\Documents\Git\chinese-now-android-widget\app\src\main\AndroidManifest.xml:15:13-17:55
 	android:resource
-		ADDED from C:\Users\Administrator\Documents\Git\chinese-now-android-widget\app\src\main\AndroidManifest.xml:18:17-52
+		ADDED from C:\Users\Administrator\Documents\Git\chinese-now-android-widget\app\src\main\AndroidManifest.xml:17:17-52
 	android:name
-		ADDED from C:\Users\Administrator\Documents\Git\chinese-now-android-widget\app\src\main\AndroidManifest.xml:17:17-58
+		ADDED from C:\Users\Administrator\Documents\Git\chinese-now-android-widget\app\src\main\AndroidManifest.xml:16:17-58
 uses-sdk
 INJECTED from C:\Users\Administrator\Documents\Git\chinese-now-android-widget\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Administrator\Documents\Git\chinese-now-android-widget\app\src\main\AndroidManifest.xml

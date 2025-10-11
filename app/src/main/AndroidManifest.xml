@@ -5,7 +5,6 @@
         android:icon="@mipmap/ic_launcher"
         android:theme="@style/AppTheme">
 
-        <!-- Widget Receiver -->
         <receiver android:name=".ChineseNow"
             android:label="Chinese Now Widget"
             android:exported="true">

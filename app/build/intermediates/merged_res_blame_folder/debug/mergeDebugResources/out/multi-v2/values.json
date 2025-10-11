@@ -25,12 +25,12 @@
                 {
                     "source": "C:\\Users\\Administrator\\Documents\\Git\\chinese-now-android-widget\\app\\src\\main\\res\\values\\themes.xml",
                     "from": {
-                        "startLines": "3,10",
+                        "startLines": "2,8",
                         "startColumns": "4,4",
-                        "startOffsets": "94,406",
-                        "endLines": "7,16",
+                        "startOffsets": "57,300",
+                        "endLines": "6,14",
                         "endColumns": "12,12",
-                        "endOffsets": "329,774"
+                        "endOffsets": "292,668"
                     },
                     "to": {
                         "startLines": "2152,2157",

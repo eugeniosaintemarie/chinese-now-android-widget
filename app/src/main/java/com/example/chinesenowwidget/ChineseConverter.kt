@@ -20,7 +20,6 @@ object ChineseConverter {
     
     private val monthsInChinese = arrayOf("一", "二", "三", "四", "五", "六", "七", "八", "九", "十", "十一", "十二")
     
-    // Nombres de los meses en chino
     private val monthNamesInChinese = arrayOf(
         "一月", "二月", "三月", "四月", "五月", "六月",
         "七月", "八月", "九月", "十月", "十一月", "十二月"
@@ -36,7 +35,6 @@ object ChineseConverter {
         "qī yuè", "bā yuè", "jiǔ yuè", "shí yuè", "shí yī yuè", "shí èr yuè"
     )
     
-    // Estaciones para Argentina (hemisferio sur)
     private val seasons = mapOf(
         "春季" to "chūn jì (spring)",
         "夏季" to "xià jì (summer)",
@@ -93,7 +91,6 @@ object ChineseConverter {
         return monthNamesPronunciation[month - 1]
     }
     
-    // Estaciones para Argentina (hemisferio sur)
     fun getSeason(month: Int): String {
         return when (month) {
             12, 1, 2 -> "夏季" // summer
@@ -108,27 +105,26 @@ object ChineseConverter {
     }
     
     fun getCurrentChineseData(): ChineseData {
-        // Usar zona horaria de Buenos Aires, Argentina
         val calendar = Calendar.getInstance(TimeZone.getTimeZone("America/Argentina/Buenos_Aires"))
         
         val hours = calendar.get(Calendar.HOUR_OF_DAY)
         val minutes = calendar.get(Calendar.MINUTE)
         val seconds = calendar.get(Calendar.SECOND)
-        val dayOfWeek = calendar.get(Calendar.DAY_OF_WEEK) - 1 // Calendar.SUNDAY = 1, necesitamos 0-6
+        val dayOfWeek = calendar.get(Calendar.DAY_OF_WEEK) - 1
         val dayOfMonth = calendar.get(Calendar.DAY_OF_MONTH)
-        val month = calendar.get(Calendar.MONTH) + 1 // Calendar.JANUARY = 0
+        val month = calendar.get(Calendar.MONTH) + 1
         val year = calendar.get(Calendar.YEAR)
         val season = getSeason(month)
         
         return ChineseData(
-            time = "${convertToChineseNumber(hours)}时${convertToChineseNumber(minutes)}分${convertToChineseNumber(seconds)}秒",
+            time = "${convertToChineseNumber(hours)}时:${convertToChineseNumber(minutes)}分:${convertToChineseNumber(seconds)}秒",
             timePinyin = "${getPronunciationHourMonth(hours)} shí ${getPronunciationHourMonth(minutes)} fēn ${getPronunciationHourMonth(seconds)} miǎo ($hours:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')})",
             
             day = getDayInChinese(dayOfWeek),
             dayPinyin = getDayPronunciation(dayOfWeek),
             
             month = "${convertToChineseNumber(month)}月",
-            monthPinyin = "${getPronunciationHourMonth(month)} yuè ($month/${getMonthNameInEnglish(month)})",
+            monthPinyin = "${getPronunciationHourMonth(month)} yuè ($month)",
             
             monthName = "",
             monthNamePinyin = "",

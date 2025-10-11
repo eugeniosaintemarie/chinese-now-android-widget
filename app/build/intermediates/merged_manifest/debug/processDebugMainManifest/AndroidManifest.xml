@@ -20,10 +20,7 @@
         android:extractNativeLibs="false"
         android:icon="@mipmap/ic_launcher"
         android:label="ChineseNow"
-        android:testOnly="true"
         android:theme="@style/AppTheme" >
-
-        <!-- Widget Receiver -->
         <receiver
             android:name="com.example.chinesenowwidget.ChineseNow"
             android:exported="true"

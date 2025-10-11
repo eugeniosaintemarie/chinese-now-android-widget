@@ -4,7 +4,7 @@ package com.example.chinesenowwidget.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
+import android.widget.FrameLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -17,7 +17,7 @@ import java.lang.String;
 
 public final class WidgetLayoutBinding implements ViewBinding {
   @NonNull
-  private final LinearLayout rootView;
+  private final FrameLayout rootView;
 
   @NonNull
   public final TextView dayPinyin;
@@ -52,7 +52,7 @@ public final class WidgetLayoutBinding implements ViewBinding {
   @NonNull
   public final TextView yearText;
 
-  private WidgetLayoutBinding(@NonNull LinearLayout rootView, @NonNull TextView dayPinyin,
+  private WidgetLayoutBinding(@NonNull FrameLayout rootView, @NonNull TextView dayPinyin,
       @NonNull TextView dayText, @NonNull TextView monthPinyin, @NonNull TextView monthText,
       @NonNull TextView refreshButton, @NonNull TextView seasonPinyin, @NonNull TextView seasonText,
       @NonNull TextView timePinyin, @NonNull TextView timeText, @NonNull TextView yearPinyin,
@@ -73,7 +73,7 @@ public final class WidgetLayoutBinding implements ViewBinding {
 
   @Override
   @NonNull
-  public LinearLayout getRoot() {
+  public FrameLayout getRoot() {
     return rootView;
   }
 
@@ -164,7 +164,7 @@ public final class WidgetLayoutBinding implements ViewBinding {
         break missingId;
       }
 
-      return new WidgetLayoutBinding((LinearLayout) rootView, dayPinyin, dayText, monthPinyin,
+      return new WidgetLayoutBinding((FrameLayout) rootView, dayPinyin, dayText, monthPinyin,
           monthText, refreshButton, seasonPinyin, seasonText, timePinyin, timeText, yearPinyin,
           yearText);
     }
