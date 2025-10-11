@@ -118,7 +118,7 @@ object ChineseConverter {
         
         return ChineseData(
             time = "${convertToChineseNumber(hours)}时:${convertToChineseNumber(minutes)}分:${convertToChineseNumber(seconds)}秒",
-            timePinyin = "${getPronunciationHourMonth(hours)} shí ${getPronunciationHourMonth(minutes)} fēn ${getPronunciationHourMonth(seconds)} miǎo ($hours:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')})",
+            timePinyin = "${getPronunciationHourMonth(hours)} shí : ${getPronunciationHourMonth(minutes)} fēn : ${getPronunciationHourMonth(seconds)} miǎo ($hours:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')})",
             
             day = getDayInChinese(dayOfWeek),
             dayPinyin = getDayPronunciation(dayOfWeek),

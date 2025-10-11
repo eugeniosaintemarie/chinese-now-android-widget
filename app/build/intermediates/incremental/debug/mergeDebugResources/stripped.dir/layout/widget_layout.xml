@@ -16,7 +16,8 @@
             android:id="@+id/time_text"
             android:text="时间"
             android:textColor="#F44336"
-            android:textSize="25sp"
+            android:textSize="32sp"
+            android:maxLines="1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
@@ -45,7 +46,8 @@
                     android:id="@+id/day_text"
                     android:text="星期"
                     android:textColor="#F44336"
-                    android:textSize="25sp"
+                    android:textSize="32sp"
+                    android:maxLines="1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
                 
@@ -62,7 +64,8 @@
                     android:id="@+id/season_text"
                     android:text="季节"
                     android:textColor="#F44336"
-                    android:textSize="25sp"
+                    android:textSize="32sp"
+                    android:maxLines="1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
                 
@@ -86,7 +89,8 @@
                     android:id="@+id/month_text"
                     android:text="月"
                     android:textColor="#F44336"
-                    android:textSize="25sp"
+                    android:textSize="32sp"
+                    android:maxLines="1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
                 
@@ -103,7 +107,8 @@
                     android:id="@+id/year_text"
                     android:text="年"
                     android:textColor="#F44336"
-                    android:textSize="25sp"
+                    android:textSize="32sp"
+                    android:maxLines="1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
                 
