@@ -16,7 +16,7 @@
             android:id="@+id/time_text"
             android:text="时间"
             android:textColor="#F44336"
-            android:textSize="32sp"
+            android:textSize="37sp"
             android:maxLines="1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
@@ -25,10 +25,10 @@
             android:id="@+id/time_pinyin"
             android:text="pinyin"
             android:textColor="#E0E0E0"
-            android:textSize="12sp"
+            android:textSize="19sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"/>
+            android:layout_marginBottom="3dp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -46,7 +46,7 @@
                     android:id="@+id/day_text"
                     android:text="星期"
                     android:textColor="#F44336"
-                    android:textSize="32sp"
+                    android:textSize="37sp"
                     android:maxLines="1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
@@ -55,16 +55,16 @@
                     android:id="@+id/day_pinyin"
                     android:text="pinyin"
                     android:textColor="#E0E0E0"
-                    android:textSize="12sp"
+                    android:textSize="19sp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"/>
+                    android:layout_marginBottom="3dp"/>
 
                 <TextView
                     android:id="@+id/season_text"
                     android:text="季节"
                     android:textColor="#F44336"
-                    android:textSize="32sp"
+                    android:textSize="37sp"
                     android:maxLines="1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
@@ -73,10 +73,10 @@
                     android:id="@+id/season_pinyin"
                     android:text="pinyin"
                     android:textColor="#E0E0E0"
-                    android:textSize="12sp"
+                    android:textSize="19sp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"/>
+                    android:layout_marginBottom="3dp"/>
             </LinearLayout>
 
             <LinearLayout
@@ -89,7 +89,7 @@
                     android:id="@+id/month_text"
                     android:text="月"
                     android:textColor="#F44336"
-                    android:textSize="32sp"
+                    android:textSize="37sp"
                     android:maxLines="1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
@@ -98,16 +98,16 @@
                     android:id="@+id/month_pinyin"
                     android:text="pinyin"
                     android:textColor="#E0E0E0"
-                    android:textSize="12sp"
+                    android:textSize="19sp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"/>
+                    android:layout_marginBottom="3dp"/>
 
                 <TextView
                     android:id="@+id/year_text"
                     android:text="年"
                     android:textColor="#F44336"
-                    android:textSize="32sp"
+                    android:textSize="37sp"
                     android:maxLines="1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
@@ -116,10 +116,10 @@
                     android:id="@+id/year_pinyin"
                     android:text="pinyin"
                     android:textColor="#E0E0E0"
-                    android:textSize="12sp"
+                    android:textSize="19sp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"/>
+                    android:layout_marginBottom="3dp"/>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
@@ -134,7 +134,7 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_gravity="bottom|end"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp" />
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp" />
 
 </FrameLayout>

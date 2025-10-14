@@ -9,13 +9,13 @@ object ChineseConverter {
     
     private val daysInChinese = arrayOf("星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六")
     private val daysPronunciation = arrayOf(
-        "xīng qī rì (sunday)",
-        "xīng qī yī (monday)",
-        "xīng qī èr (tuesday)",
-        "xīng qī sān (wednesday)",
-        "xīng qī sì (thursday)",
-        "xīng qī wǔ (friday)",
-        "xīng qī liù (saturday)"
+        "xīng qī rì SUNDAY",
+        "xīng qī yī MONDAY",
+        "xīng qī èr TUESDAY",
+        "xīng qī sān WEDNESDAY",
+        "xīng qī sì THURSDAY",
+        "xīng qī wǔ FRIDAY",
+        "xīng qī liù SATURDAY"
     )
     
     private val monthsInChinese = arrayOf("一", "二", "三", "四", "五", "六", "七", "八", "九", "十", "十一", "十二")
@@ -26,8 +26,8 @@ object ChineseConverter {
     )
     
     private val monthNamesInEnglish = arrayOf(
-        "january", "february", "march", "april", "may", "june",
-        "july", "august", "september", "october", "november", "december"
+        "JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE",
+        "JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER"
     )
     
     private val monthNamesPronunciation = arrayOf(
@@ -36,10 +36,10 @@ object ChineseConverter {
     )
     
     private val seasons = mapOf(
-        "春季" to "chūn jì (spring)",
-        "夏季" to "xià jì (summer)",
-        "秋季" to "qiū jì (autumn)",
-        "冬季" to "dōng jì (winter)"
+        "春季" to "chūn jì SPRING",
+        "夏季" to "xià jì SUMMER",
+        "秋季" to "qiū jì AUTUMN",
+        "冬季" to "dōng jì WINTER"
     )
     
     fun convertToChineseNumber(number: Int): String {
@@ -118,22 +118,22 @@ object ChineseConverter {
         
         return ChineseData(
             time = "${convertToChineseNumber(hours)}时:${convertToChineseNumber(minutes)}分:${convertToChineseNumber(seconds)}秒",
-            timePinyin = "${getPronunciationHourMonth(hours)} shí : ${getPronunciationHourMonth(minutes)} fēn : ${getPronunciationHourMonth(seconds)} miǎo ($hours:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')})",
+            timePinyin = "${getPronunciationHourMonth(hours)} shí : ${getPronunciationHourMonth(minutes)} fēn : ${getPronunciationHourMonth(seconds)} miǎo $hours:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}",
             
             day = getDayInChinese(dayOfWeek),
             dayPinyin = getDayPronunciation(dayOfWeek),
             
             month = "${convertToChineseNumber(month)}月",
-            monthPinyin = "${getPronunciationHourMonth(month)} yuè ($month)",
+            monthPinyin = "${getPronunciationHourMonth(month)} yuè $month",
             
             monthName = "",
             monthNamePinyin = "",
             
             date = "${convertToChineseNumber(dayOfMonth)}日",
-            datePinyin = "${getPronunciationHourMonth(dayOfMonth)} rì ($dayOfMonth)",
+            datePinyin = "${getPronunciationHourMonth(dayOfMonth)} rì $dayOfMonth",
             
             year = convertToChineseNumber(year).toString(),
-            yearPinyin = "${getPronunciationHourMonth(year)} ($year)",
+            yearPinyin = "${getPronunciationHourMonth(year)} $year",
             
             season = season,
             seasonPinyin = getSeasonPronunciation(season)
