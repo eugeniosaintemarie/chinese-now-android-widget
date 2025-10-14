@@ -1,0 +1,1 @@
+# Chinese Now Android widget
